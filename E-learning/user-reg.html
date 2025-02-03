@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Η ομάδα σας">
+    <link rel="stylesheet" href="styleset.css">
+    <title>Εγγραφή Χρήστη</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div>
+            <img src= "../images/logo.png" alt="Λογότυπο E-Learning Πληροφορικής" width="100">
+            <h1>Εγγραφή Χρήστη</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Αρχική</a></li>
+                <li><a href="categories.html">Θεματικές Κατηγορίες</a></li>
+                <li><a href="about-us.html">Ποιοι Είμαστε</a></li>
+                <li><a href="contact.html">Επικοινωνία</a></li>
+                <li><a class="active" href="user-registration.html">Εγγραφή</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <section>
+            <h2>Συμπληρώστε τη Φόρμα Εγγραφής</h2>
+            <form id="registration-form" novalidate>
+                <fieldset>
+                    <legend>Προσωπικά Στοιχεία</legend>
+                    <label for="fullname">Ονοματεπώνυμο:</label>
+                    <input type="text" id="fullname" name="fullname" required autocomplete="name" placeholder="Π.χ. Μαρία Παπαδοπούλου">
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="Π.χ. example@mail.com">
+
+                    <label for="address">Διεύθυνση:</label>
+                    <input type="text" id="address" name="address" required autocomplete="street-address" placeholder="Π.χ. Οδός Αριθμός, Πόλη">
+
+                    <label for="birthdate">Ημερομηνία Γέννησης:</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+
+                    <label for="phone">Τηλέφωνο:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Π.χ. 6981234567">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Στοιχεία Ταυτοποίησης</legend>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required autocomplete="username" placeholder="Π.χ. user123">
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required placeholder="Εισάγετε password">
+
+                    <label for="confirm-password">Επιβεβαίωση Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required placeholder="Επιβεβαιώστε password">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Προτιμήσεις Επικοινωνίας</legend>
+                    <label for="communication">Επιλέξτε Μέθοδο:</label>
+                    <select id="communication" name="communication" required>
+                        <option value="email">Email</option>
+                        <option value="sms">SMS</option>
+                        <option value="viber">Viber</option>
+                        <option value="whatsapp">WhatsApp</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Ερωτηματολόγιο</legend>
+                    
+                    <label for="education">Εκπαίδευση:</label>
+                    <input type="text" id="education" name="education" required placeholder="Π.χ. Πτυχίο Πληροφορικής">
+                
+                    <label for="experience">Επαγγελματική Εμπειρία:</label>
+                    <textarea id="experience" name="experience" rows="3" placeholder="Περιγράψτε την εμπειρία σας"></textarea>
+                
+                    <label>Ενδιαφέροντα:</label>
+                    <input type="checkbox" id="programming" name="interest" value="programming">
+                    <label for="programming">Προγραμματισμός</label>
+                
+                    <input type="checkbox" id="design" name="interest" value="design">
+                    <label for="design">Σχεδίαση</label>
+                
+                    <input type="checkbox" id="ai" name="interest" value="ai">
+                    <label for="ai">Τεχνητή Νοημοσύνη</label>
+                
+                    
+                    <fieldset>
+                        <legend>Πόσο άνετα νιώθετε με τη χρήση υπολογιστών;</legend>
+                        <label><input type="radio" name="comfort-level" value="1" required> 1 - Καθόλου</label><br>
+                        <label><input type="radio" name="comfort-level" value="2"> 2 - Σχεδόν Καθόλου</label><br>
+                        <label><input type="radio" name="comfort-level" value="3"> 3 - Μέτρια</label><br>
+                        <label><input type="radio" name="comfort-level" value="4"> 4 - Αρκέτα</label><br>
+                        <label><input type="radio" name="comfort-level" value="5"> 5 - Σίγουρα</label>
+                    </fieldset>
+                
+                    
+                    <fieldset>
+                        <legend>Πόσο προθυμοι είστε να υιοθετήσετε νέες τεχνολογίες;</legend>
+                        <label><input type="radio" name="tech-willingness" value="1" required> 1 - Καθόλου</label><br>
+                        <label><input type="radio" name="tech-willingness" value="2"> 2 - Σχεδόν Καθόλου</label><br>
+                        <label><input type="radio" name="tech-willingness" value="3"> 3 - Μετρια</label><br>
+                        <label><input type="radio" name="tech-willingness" value="4"> 4 - Αρκέτα </label><br>
+                        <label><input type="radio" name="tech-willingness" value="5"> 5 - Σίγουρα</label>
+                    </fieldset>
+                </fieldset>
+                
+
+                <button type="submit">Υποβολή</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- to footer -->
+    <footer>
+        <section>
+            <p>Επικοινωνήστε μαζί μας: <a href="mailto:info@elearning-plhroforiki.gr">info@elearning-plhroforiki.gr</a> | Τηλέφωνο: +30 210 1234567</p>
+            <p>&copy; 2024 Ηλεκτρονική Εκπαίδευση στην Πληροφορική. Όλα τα δικαιώματα κατοχυρωμένα.</p>
+            <ul>
+                <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+            </ul>
+            <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                    <img style="border:0;width:88px;height:31px"
+                        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                        alt="Έγκυρο CSS!" />
+                </a>
+        </section>
+    </footer>
+
+    <script src="validation.js"></script>
+</body>
+</html>
